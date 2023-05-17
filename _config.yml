@@ -38,5 +38,8 @@ plugins:
 # [Jekyll Themes](https://pages.github.com/themes/)
 theme: jekyll-theme-midnight
 
+exclude: [README.md, init_github_pages_with_jekyll.md, install_ruby_and_jekyll.md, sampler_of_markdown.md]
 source: site
 destination: _site
+
+profile: true
