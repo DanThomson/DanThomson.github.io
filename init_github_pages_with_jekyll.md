@@ -6,10 +6,9 @@
 
 ## **NOTE!** The directions linked in the GitHub documentation are missing a step
 [More Complete Directions](https://jekyllrb.com/docs/)
-The warning at the bottom are particularly important.
-"""
-If you are using Ruby version 3.0.0 or higher, step 5 may fail. You may fix it by adding `webrick` to your dependencies: `bundle add webrick`
-"""
+
+The warning at the bottom of "More Complete Directions" is particularly important.
+> If you are using Ruby version 3.0.0 or higher, step 5 may fail. You may fix it by adding `webrick` to your dependencies: `bundle add webrick`
 
 
 ## Github recommends putting your page source in a separate branch
