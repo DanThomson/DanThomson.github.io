@@ -11,12 +11,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+author: Dan Thomson
+
 title: Dan's notes, etc
 # email: <DanielOliverThomson@gmail.com>
 description: >- # this means to ignore newlines until "baseurl:"
   These are my notes which will become HOWTOs and tutorials.
 
-baseurl: ""
+baseurl: "/"
 url: "https://DanThomson.githuba.io"
 
 # twitter_username: <twitter_username>
@@ -37,7 +39,8 @@ exclude:
   - init_github_pages_with_jekyll.md
   - install_ruby_and_jekyll.md
   - sampler_of_markdown.md
+
 source: site
 destination: _site
 
-profile: true
+# profile: true
