@@ -12,7 +12,7 @@ The warning at the bottom of "More Complete Directions" is particularly importan
 
 
 ## Github recommends putting your page source in a separate branch
-** Note if this is your first use of Jekyll, you'll need to install it with, `gem install jekyll`. **
+***Note if this is your first use of Jekyll, you'll need to install it with, `gem install jekyll`.***
 ``` bash
 # Create a new branch, with no history or contents, called gh-pages, and switch to the gh-pages branch.
 git checkout --orphan gh-pages
@@ -38,8 +38,9 @@ gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
 ### Update the bundle by installing gems
 
 #### Before running `bundle install`
-This was missing from the directions I started with. Life was hard.
-** If you installed Jekyll, uninstall it (`gem uninstall jekyll`), so `github-pages` can install the version it uses **
+***If you installed Jekyll, uninstall it (`gem uninstall jekyll`), so `github-pages` can install the version it uses***
+
+These two lines were missing from the directions I started with. Life was hard.
 ``` bash
 bundle add webrick
 gem install github-pages
