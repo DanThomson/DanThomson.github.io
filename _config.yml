@@ -21,9 +21,9 @@
 title: Dan's notes, etc
 # email: <your-email@example.com>
 description: >- # this means to ignore newlines until "baseurl:"
-  TODO update this!
-  You can edit this line in _config.yml. It will appear in your
-  document head meta and in your feed.xml site description.
+  These are my notes which will become HOWTOs and tutorials.
+  For now, all documentation here should be considered untested works in progress.
+
 baseurl: ""
 url: "https://DanThomson.githuba.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: <twitter_username>
@@ -38,5 +38,5 @@ plugins:
 # [Jekyll Themes](https://pages.github.com/themes/)
 theme: jekyll-theme-midnight
 
-source: site-src
-destination: build
+source: site
+destination: _site
