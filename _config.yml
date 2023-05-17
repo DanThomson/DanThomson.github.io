@@ -39,3 +39,4 @@ plugins:
 theme: jekyll-theme-midnight
 
 source: site-src
+destination: build

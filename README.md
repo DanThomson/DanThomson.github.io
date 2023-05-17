@@ -1,6 +1,10 @@
 # DanThomson.github.io
 
 
+## important documentation for _config.yml
+[Jekyll configuration](https://jekyllrb.com/docs/configuration/options/)
+
+
 ## Before running `bundle install`
 ``` bash
 gem install github-pages  # So the required version of Jekyll is used
