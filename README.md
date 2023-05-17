@@ -1,4 +1,13 @@
-# These are Dan Thomson's working notes. Many will not be ready for a general audience.
+# DanThomson.github.io
 
+## Before running `bundle install`
 
-### [Bash conditionals](shorts/bash_conditionals.md)
+``` bash
+gem install github-pages  # So the required version of Jekyll is used
+bundle add webrick        # Jekyll couldn't find webrick. This should probably be in the Gemfile
+```
+
+## Run the site locally for development.
+``` bash
+bundle exec jekyll serve
+```
