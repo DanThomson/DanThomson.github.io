@@ -20,7 +20,7 @@ title: Dan's notes, etc
 description: >- # this means to ignore newlines until "baseurl:"
   These are my notes which will become HOWTOs and tutorials.
 
-baseurl: "/site"
+baseurl: ""
 url: "https://DanThomson.githuba.io"
 
 
