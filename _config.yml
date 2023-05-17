@@ -11,14 +11,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+
 author: Dan Thomson
 github_username:  DanThomson
 # email: <DanielOliverThomson@gmail.com>
 # twitter_username: <twitter_username>
 
+
 title: Dan's notes, etc
 description: >- # this means to ignore newlines until "baseurl:"
   These are my notes which will become HOWTOs and tutorials.
+
 
 baseurl: ""
 url: "https://DanThomson.githuba.io"
@@ -29,16 +32,21 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
+
 # Supported themes:
 # [Jekyll Themes](https://pages.github.com/themes/)
-theme: jekyll-theme-dinky
-remote_theme: pages-themes/dinky@v0.2.0
+# theme: jekyll-theme-dinky
+# remote_theme: pages-themes/dinky@v0.2.0
+theme: minima
+remote_theme: minima
+
 
 exclude:
   - README.md
   - init_github_pages_with_jekyll.md
   - install_ruby_and_jekyll.md
   - sampler_of_markdown.md
+
 
 source: site
 destination: _site
