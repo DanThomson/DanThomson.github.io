@@ -12,17 +12,17 @@
 # in the templates via {{ site.myvariable }}.
 
 author: Dan Thomson
+github_username:  DanThomson
+# email: <DanielOliverThomson@gmail.com>
+# twitter_username: <twitter_username>
 
 title: Dan's notes, etc
-# email: <DanielOliverThomson@gmail.com>
 description: >- # this means to ignore newlines until "baseurl:"
   These are my notes which will become HOWTOs and tutorials.
 
-baseurl: "/"
+baseurl: "/site"
 url: "https://DanThomson.githuba.io"
 
-# twitter_username: <twitter_username>
-github_username:  DanThomson
 
 # Build settings
 plugins:
