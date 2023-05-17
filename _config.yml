@@ -35,10 +35,8 @@ plugins:
 
 # Supported themes:
 # [Jekyll Themes](https://pages.github.com/themes/)
-# theme: jekyll-theme-dinky
-# remote_theme: pages-themes/dinky@v0.2.0
-theme: minima
-remote_theme: minima
+theme: jekyll-theme-dinky
+remote_theme: pages-themes/dinky@v0.2.0
 
 
 exclude:
@@ -48,7 +46,5 @@ exclude:
   - sampler_of_markdown.md
 
 
-source: site
+source: docs
 destination: _site
-
-# profile: true
