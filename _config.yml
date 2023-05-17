@@ -1,0 +1,9 @@
+theme: minima
+# To use any other Jekyll theme hosted on GitHub,
+# type remote_theme: THEME-NAME,
+# replacing THEME-NAME with the name of the theme as shown in the
+# README of the theme's repository.
+# More themes available at:
+# [Jekyll Themes](https://pages.github.com/themes/)
+# 
+# Most github documentation uses branch `gh-pages`
