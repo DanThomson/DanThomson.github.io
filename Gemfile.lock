@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -254,6 +255,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
+  minima (~> 2.5)
   webrick (~> 1.8)
 
 BUNDLED WITH
