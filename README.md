@@ -1,20 +1,23 @@
-# DanThomson.github.io
+# DanThomson.github.io source
+
+## This is the source for [my github page](https://DanThomson.github.io)
+## The information contained here is for the authors own use.
+## Everything on this page should be considered and untested work in progress.
 
 
-## important documentation for _config.yml
 [Jekyll configuration](https://jekyllrb.com/docs/configuration/options/)
+[HOWTO github pages](init_github_pages_with_jekyll.md)
+[HOWTO install ruby](install_ruby_and_jekyll.md)
 
 
-
-## Before running `bundle install`
+### Before running `bundle install`
 ``` bash
-gem install github-pages  # So the required version of Jekyll is used
-bundle add webrick        # Jekyll couldn't find webrick. This should probably be in the Gemfile. This should be verified.
+gem install github-pages
+bundle add webrick
 ```
-[HOWTO github pages documentation](init_github_pages_with_jekyll.md)
-[HOWTO install ruby](init_github_pages_with_jekyll.md)
 
-## Run the site locally for development.
+
+### Run the site locally.
 ``` bash
 bundle exec jekyll serve
 ```
