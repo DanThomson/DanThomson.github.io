@@ -19,13 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Dan's notes, etc
-# email: <your-email@example.com>
+# email: <DanielOliverThomson@gmail.com>
 description: >- # this means to ignore newlines until "baseurl:"
   These are my notes which will become HOWTOs and tutorials.
-  For now, all documentation here should be considered untested works in progress.
 
 baseurl: ""
-url: "https://DanThomson.githuba.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://DanThomson.githuba.io"
+
 # twitter_username: <twitter_username>
 github_username:  DanThomson
 

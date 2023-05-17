@@ -1,67 +1,95 @@
+# Start a new Github page within an existing repository
+[Github Source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
-If you are creating docs for a codebase Github recommends putting them in a separate branch.
+[Another Github Source](https://docs.github.com/en/pages/quickstart)
+
+
+## **NOTE!** The directions linked in the GitHub documentation are missing a step
+[More Complete Directions](https://jekyllrb.com/docs/)
+The warning at the bottom are particularly important.
+"""
+If you are using Ruby version 3.0.0 or higher, step 5 may fail. You may fix it by adding `webrick` to your dependencies: `bundle add webrick`
+"""
+
+
+## Github recommends putting your page source in a separate branch
+** Note if this is your first use of Jekyll, you'll need to install it with, `gem install jekyll`. **
 ``` bash
-$ git checkout --orphan gh-pages
-# Creates a new branch, with no history or contents, called gh-pages, and switches to the gh-pages branch
-$ git rm -rf .
-# Removes the contents from your default branch from the working directory
+# Create a new branch, with no history or contents, called gh-pages, and switch to the gh-pages branch.
+git checkout --orphan gh-pages
 
-# Create a Jekyll site in the current directory
+# Remove the contents from your default branch from the working directory.
+git rm -rf .
+
+# Create a Jekyll site in the current directory.
 jekyll new --skip-bundle .
 ```
 
-Update the `Gemfile` Jekyll created.
-    There may already be a line which begins `gem "github-pages"`. Edit that line.
-    ``` Gemfile
-    gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
-    ```
-    Replace `GITHUB-PAGES-VERSION` with the version listed for `github-pages` on
-    [github pages dependencies](https://pages.github.com/versions/)
 
+## Customize the default configuration
+[Jekyll Configuration](https://jekyllrb.com/docs/configuration/options/)
 
-Bundle will use the `Gemfile` when you execute:
+### Update the `Gemfile` Jekyll created
+
+#### Replace `GITHUB-PAGES-VERSION` with the version listed for `github-pages` on the [github pages dependencies](https://pages.github.com/versions/)
+``` Gemfile
+gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
+```
+
+### Update the bundle by installing gems
+
+#### Before running `bundle install`
+This was missing from the directions I started with. Life was hard.
+** If you installed Jekyll, uninstall it (`gem uninstall jekyll`), so `github-pages` can install the version it uses **
+``` bash
+bundle add webrick
+gem install github-pages
+```
+
+#### Bundle will use the `Gemfile` when you execute:
 ``` bash
 bundle install
 ```
 
+### Edit `_config.yml`
 
-Edit `_config.yml`. Github recommends updating the following:
+#### Github recommends updating the following
 ``` yaml
+# _config.yml
 domain: my-site.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://my-site.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /REPOSITORY-NAME/      # place folder name if the site is served in a subfolder
 ```
 
-You'll probably also want to change the [theme](https://pages.github.com/themes/).
-jekyll-swiss 1.0.0
-jekyll-theme-architect 0.2.0
-jekyll-theme-cayman 0.2.0
-jekyll-theme-dinky 0.2.0
-jekyll-theme-hacker 0.2.0
-jekyll-theme-leap-day 0.2.0
-jekyll-theme-merlot 0.2.0
-jekyll-theme-midnight 0.2.0
-jekyll-theme-minimal 0.2.0
-jekyll-theme-modernist 0.2.0
-jekyll-theme-primer 0.6.0
-jekyll-theme-slate 0.2.0
-jekyll-theme-tactile 0.2.0
-jekyll-theme-time-machine 0.2.0
-`pages-themes/cayman@v0.2.0`, `pages-themes/midnight@v0.2.0`, `pages-themes/dinky@v0.2.0`, `pages-themes/hacker@v0.2.0`, `pages-themes/modernist@v0.2.0`, and `pages-themes/tactile@v0.2.0`
-`minima`
+#### You'll probably also want to change the [theme](https://pages.github.com/themes/)
+
+Prefix one of the following with `jekyll-theme-`
+
+architect, cayman, dinky, hacker, leap-day, merlot, midnight, minimal, modernist, primer, slate, tactile, time-machine
 ``` yaml
-theme: pages-themes/midnight@v0.2.0
+# _config.yml
+theme: jekyll-theme-midnight
+```
+More information about themes at [Github](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll).
+
+
+## Run the site locally
+[Github Source](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+``` bash
+bundle exec jekyll serve
+# Or for update on changes:
+bundle exec jekyll serve --livereload
 ```
 
 
-After creating a commit you'll need to add a remote location. I
-think this is required because of the `--orphan` option.
-`git remote add origin https://github.com/USER/REPOSITORY.git`
+## After creating a commit you'll need to add a remote location
+I think this is required because of the `--orphan` option used above.
+``` bash
+git remote add origin https://github.com/USER/REPOSITORY.git
+```
 
 
-maybe add this to Gemfile
-faraday-retry
-
-
-
-bundle exec jekyll serve
+## Eventually you'll have to update
+``` bash
+bundle update github-pages
+```
