@@ -6,32 +6,39 @@
 
 ### Multi line
 ``` bash
-if test -f "/etc/profile"
+if test -f '/etc/profile'
 then
     echo 'profile exists'
 fi
 # Or
-if test -f "/etc/profile"; then
+if test -f '/etc/profile'; then
+    echo 'profile exists'
+fi
+# Or
+if [ -f '/etc/profile' ]
+then
     echo 'profile exists'
 fi
 ```
 
 ### One liner
 ``` bash
-if [ -f "/etc/profile" ]; then echo 'profile exists'; fi
+if [ -f '/etc/profile' ]; then echo 'profile exists'; fi
 # Or
-[ -f "/usr/bin/wine" ] && echo 'profile exists'
+[ -f '/etc/profile' ] && echo 'profile exists'
+# Or
+if test -f '/etc/profile'; then echo 'profile exists'; fi
 ```
 
 ## `test` vs square brackets etc
 ### `[` is an alias for `test` builtin
 ``` bash
 if test -f /etc/profile; then
-    echo "The file /etc/profile exists"
+    echo 'The file /etc/profile exists'
 fi
 # Is the same as
 if [ -f /etc/profile ]; then
-    echo "The file /etc/profile exists"
+    echo 'The file /etc/profile exists'
 fi
 ```
 Just think of the brackets as a call to `test`. Worth noting is
@@ -40,9 +47,9 @@ one e.g.
 ``` sh
 if [ $MY_SET_VAR = $MY_UNSET_VAR ]
 then
-    echo "I won't print"
+    echo 'I won't print'
 else
-    echo "I won't either"
+    echo 'I won't either'
 fi
 ```
 
@@ -99,18 +106,18 @@ fi
 
 ## Some of the operators
 ``` bash
--eq	# Returns true if two numbers are equivalent
--lt	# Returns true if a number is less than another number
--gt	# Returns true if a number is greater than another number
-==	# Returns true if two strings are equivalent
-!=	# Returns true if two strings are not equivalent
-!	# Returns true if the expression is false
--d	# Check the existence of a directory
--e	# Check the existence of a file system object (directory, file, link, etc).
--f	# Check the existence of a file
--r	# Check the existence of a file and read permission
--w	# Check the existence of a file and write permission
--x	# Check the existence of a file and execute permission
+-eq	 # Returns true if two numbers are equivalent
+-lt	 # Returns true if a number is less than another number
+-gt	 # Returns true if a number is greater than another number
+==	 # Returns true if two strings are equivalent
+!=	 # Returns true if two strings are not equivalent
+!	 # Returns true if the expression is false
+-d	 # Check the existence of a directory
+-e	 # Check the existence of a file system object (directory, file, link, etc).
+-f   # Check the existence of a file
+-r	 # Check the existence of a file and read permission
+-w	 # Check the existence of a file and write permission
+-x	 # Check the existence of a file and execute permission
 ```
 
 ### Examples
