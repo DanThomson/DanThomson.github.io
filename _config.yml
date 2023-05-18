@@ -46,5 +46,14 @@ exclude:
   - sampler_of_markdown.md
 
 
-source: docs
-destination: _site
+# These cannot be changed. Github mandates these settings.
+lsi: false
+safe: true
+source: /
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
