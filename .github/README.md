@@ -22,3 +22,5 @@
 * [Sampler](docs/sampler_of_markdown.md) *wip*
 
 * [Making Readmes Readable](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md)
+
+* Read about [Syntax](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting) next
