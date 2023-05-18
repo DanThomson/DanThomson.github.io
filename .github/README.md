@@ -8,9 +8,9 @@
 
 ### Installation required for local development of GitHub Pages
 
-[HOWTO install ruby](install_ruby_and_jekyll.md)
+[HOWTO install ruby](docs/ruby_on_archlinux.md)
 
-[HOWTO github pages](init_github_pages_with_jekyll.md)
+[HOWTO github pages](docs/jekyll_on_github.md)
 
 
 ### Documentation about documentation
@@ -19,6 +19,6 @@
 
 * [Emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 
-* [Sampler](sampler_of_markdown.md) *wip*
+* [Sampler](docs/sampler_of_markdown.md) *wip*
 
 * [Making Readmes Readable](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md)
