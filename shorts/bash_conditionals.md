@@ -120,7 +120,10 @@ fi
 -r	 # Check the existence of a file and read permission
 -w	 # Check the existence of a file and write permission
 -x	 # Check the existence of a file and execute permission
+-n   # String is not null
+-z   # String has zero length, i.e. string is null
 ```
+[Operator reference](https://tldp.org/LDP/abs/html/comparison-ops.html)
 
 ### Examples
 ``` bash
