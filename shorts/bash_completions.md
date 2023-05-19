@@ -24,18 +24,22 @@ pkg-config bash-completion --variable compatdir
 ### Second find out if `systemctl` has a custom completion script.
 ``` bash
 $ complete -p systemctl
-# There are two categories of output from complete -p <cmd>
-# The first tells us the obvious, that there is nothing special
-# about sample_is_too_long_to_type, and it is completed with
-# bash's default completion
+```
+There are two categories of output from complete -p <cmd> The
+first tells us the obvious, that there is nothing special about
+`systemctl`, and it is completed with bash's default completion.
+``` bash
 bash: complete: systemctl: no completion specification
-# If this happens check to see if [bash_completion](shorts/bash_completion_setup.md) is being source.
+```
+If this happens check to see if [bash_completion](shorts/bash_completion_setup.md) is being source.
 
-# The second category of output looks like this:
+The second category of output looks like this:
+``` bash
 $ complete -p systemctl
 complete -F _systemctl systemctl
 ```
-This tells us that bash uses a function named `_systemctl` when completing the command `systemctl`.
+This tells us that bash uses a function named `_systemctl` when
+completing the command `systemctl`.
 
 
 ### Third find the `_systemctl` function.
@@ -60,3 +64,4 @@ EndOfFile
 
 
 ### Fifth test it or don't. Either way this tutorial is done.
+*You may have to source your new completion file before testing.*
