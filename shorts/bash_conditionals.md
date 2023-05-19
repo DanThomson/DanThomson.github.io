@@ -65,6 +65,8 @@ programmers. It is not a call to `test`, and consequentially
 supports unary tests. It also allows for more C-like syntax with
 `>`, `<`, `>=`, `<=`, `!=`, `==`, `&&`, and `||` operators.
 
+It is **not** supported on `dash` **:-(**
+
 More about the differences between \[ and \[\[ [here](https://unix.stackexchange.com/questions/32210/why-does-parameter-expansion-with-spaces-without-quotes-work-inside-double-brack)
 
 ### And there are still more
