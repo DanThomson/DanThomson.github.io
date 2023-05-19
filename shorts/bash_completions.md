@@ -7,6 +7,8 @@ replicating the completion of an existing command named
 
 Reference:
 
+* [using-the-bash-autocompletion-of-another-command](https://stackoverflow.com/questions/38936716/using-the-bash-autocompletion-of-another-command)
+
 * [what-package-is-responsible-for-bash-completion-for-systemd-systemctl-on-ubuntu](https://askubuntu.com/questions/1044209/what-package-is-responsible-for-bash-completion-for-systemd-systemctl-on-ubuntu)
 
 * [Programmable-Completion-Builtins](https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html)
