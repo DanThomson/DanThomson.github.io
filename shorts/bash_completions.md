@@ -13,6 +13,9 @@ Reference:
 
 * [Programmable-Completion-Builtins](https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html)
 
+* [wayback bash_completion pt1](https://web.archive.org/web/20190328055722/https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1)
+  [wayback bash_completion pt2](https://web.archive.org/web/20140405211529/http://www.debian-administration.org/article/317/An_introduction_to_bash_completion_part_2)
+
 
 ### First find out where to put your custom completion script.
 This presumes you've installed `bash-completion`.
@@ -27,7 +30,7 @@ pkg-config bash-completion --variable compatdir
 ``` bash
 $ complete -p systemctl
 ```
-There are two categories of output from complete -p <cmd> The
+There are two categories of output from `complete -p <cmd>` The
 first tells us the obvious, that there is nothing special about
 `systemctl`, and it is completed with bash's default completion.
 ``` bash

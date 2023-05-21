@@ -122,8 +122,10 @@ fi
 -x	 # Check the existence of a file and execute permission
 -n   # String is not null
 -z   # String has zero length, i.e. string is null
+-L   # True if param is a symbolic link. Only works when the fso does not have a trailing '/'
 ```
 [Operator reference](https://tldp.org/LDP/abs/html/comparison-ops.html)
+
 
 ### Examples
 ``` bash
