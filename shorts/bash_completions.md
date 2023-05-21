@@ -16,6 +16,12 @@ Reference:
 * [wayback bash_completion pt1](https://web.archive.org/web/20190328055722/https://debian-administration.org/article/316/An_introduction_to_bash_completion_part_1)
   [wayback bash_completion pt2](https://web.archive.org/web/20140405211529/http://www.debian-administration.org/article/317/An_introduction_to_bash_completion_part_2)
 
+* [configure-bash-auto-completion-tab-completion-on-linux](https://faun.pub/configure-bash-auto-completion-tab-completion-on-linux-db0d9310818b)
+
+* [bash-programmable-completion-tutorial](https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial)
+
+* [creating-bash-completion-script](https://opensource.com/article/18/3/creating-bash-completion-script)
+
 
 ### First find out where to put your custom completion script.
 This presumes you've installed `bash-completion`.
