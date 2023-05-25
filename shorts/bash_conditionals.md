@@ -123,6 +123,9 @@ fi
 -n   # String is not null
 -z   # String has zero length, i.e. string is null
 -L   # True if param is a symbolic link. Only works when the fso does not have a trailing '/'
+
+     # From man dash(1)
+-b   # True if file exists and is a block special file.
 ```
 [Operator reference](https://tldp.org/LDP/abs/html/comparison-ops.html)
 

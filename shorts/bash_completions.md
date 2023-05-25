@@ -42,7 +42,7 @@ first tells us the obvious, that there is nothing special about
 ``` bash
 bash: complete: systemctl: no completion specification
 ```
-If this happens check to see if [bash_completion](shorts/bash_completion_setup.md) is being source.
+If this happens check to see if [bash_completion](shorts/bash_completion_setup.md) is being sourced.
 
 The second category of output looks like this:
 ``` bash
