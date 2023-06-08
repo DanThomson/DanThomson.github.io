@@ -1,3 +1,10 @@
+---
+title: Sample of Mathjax
+permalink: /math/sample
+usemath: true
+usemathjax: true
+---
+
 # Practice Mathjax / Latex -- starting with some basics of Calculus
 
 ## References
@@ -48,5 +55,3 @@ $$
 $$
 
 #### Cosecant, secant, and cotangent are defined the way you'd expect. They are just the reciprocals of their respective functions.
-
-#### 
