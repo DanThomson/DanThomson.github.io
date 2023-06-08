@@ -25,6 +25,7 @@ permalink: /math/sample
 
 ### Properties of Logarithms ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions#13)) :flushed:
 If $a$,$b$,$c>0$,$b\ne1$, and $r$ is any real number, then
+
 $$
 \begin{array}{lll}
 \text{1.} & \log_b (a\cdot c) = \log_b (a) + \log_b (c) & \text{(Product Property)} \\
