@@ -2,9 +2,11 @@
 title: Sample of Mathjax
 permalink: /math/sample
 ---
-{% include head.html %}
+{% include math.html %}
+
 
 # Practice Mathjax / Latex -- starting with some basics of Calculus
+
 
 ## References
 1. Mathjax/Latex [Primer](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
@@ -36,7 +38,9 @@ Let $a>0$, $b>0$, and $a\ne1$, $b\ne1$.
 1. $a^x = b^{x\cdot \log_b a}$ for any real number $x$.<br> If $b=e$, this equation reduces to $a^x = e^{x\cdot \log_e a} = e^{x\cdot \ln a}$
 2. $\log_ax = \frac{\log_b x}{\log_b a}$ for any real number $x>0$.<br>If $b=e$, this equation reduces to $\log_a x = \frac{\ln x}{\ln a}$.
 
+
 ----------------------------------------------------------------
+
 
 ### Hyperbolic Functions ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions#25))
 #### Hyperbolic cosine
