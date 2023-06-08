@@ -1,9 +1,8 @@
 ---
 title: Sample of Mathjax
 permalink: /math/sample
-usemath: true
-usemathjax: true
 ---
+{% include head.html %}
 
 # Practice Mathjax / Latex -- starting with some basics of Calculus
 
@@ -15,14 +14,14 @@ usemathjax: true
 
 ## Exponential and Logarithmic Functions ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions))
 
-### Laws of Exponents ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions#5)):smirk:
+### Laws of Exponents ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions#5)) :smirk:
 1. $b^xb^y = b^{x+y}$
 2. $\frac{b^x}{b^y} = b^{xy}$
 3. $(b^x)^y = b^{xy}$
 4. $(ab)^x = a^xb^x$
 5. $\frac{a^x}{b^x} = \left(\frac{a}{b}\right)^x$
 
-### Properties of Logarithms ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions#13)):flushed:
+### Properties of Logarithms ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions#13)) :flushed:
 $$
 \begin{array}{lll}
 \text{1.} & \log_b (ac) = \log_b (a) + \log_b (c) & \text{(Product Property)} \\
