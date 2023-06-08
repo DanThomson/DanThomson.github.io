@@ -15,7 +15,7 @@ permalink: /shorts/x3dom
     <scene>
         <shape>
             <appearance>
-                <material diffuseColor='1 0 0'></material>
+                <material diffuseColor='0.5 0.5 0.5'></material>
             </appearance>
             <box></box>
         </shape>
