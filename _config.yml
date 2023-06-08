@@ -49,7 +49,7 @@ exclude:
 # These cannot be changed. Github mandates these settings.
 lsi: false
 safe: true
-source: /
+source: .
 incremental: false
 highlighter: rouge
 gist:
