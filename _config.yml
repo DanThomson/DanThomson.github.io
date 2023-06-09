@@ -36,8 +36,10 @@ plugins:
 
 # Supported themes:
 # [Jekyll Themes](https://pages.github.com/themes/)
-theme: jekyll-theme-dinky
-remote_theme: pages-themes/dinky@v0.2.0
+# theme: jekyll-theme-dinky
+# remote_theme: pages-themes/dinky@v0.2.0
+theme: jekyll-theme-minimal
+remote_theme: pages-themes/minimal@v0.2.0
 
 
 exclude:
