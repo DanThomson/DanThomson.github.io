@@ -164,3 +164,26 @@ permalink: /shorts/svg
       fill="transparent"
   />
 </svg>
+
+
+<hr>
+
+
+<svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- large-arc-flag: 0 == smaller arc, 1 == large arc -->
+  <!-- Sweep: 0 == counter-clockwise, 1 == clockwise -->
+  <!--     A rx ry x-axis-rotation large-arc-flag sweep-flag x   y -->
+  <path d="M 80 80
+           A 45 45, 0,             0,             0,         125 125
+           L 125 80 Z" fill="green"/>
+  <path d="M 230 80
+           A 45 45, 0,             1,             0,         275 125
+           L 275 80 Z" fill="red"/>
+  <path d="M 80 230
+           A 45 45, 0,             0,             1,         125 275
+           L 125 230 Z" fill="purple"/>
+  <path d="M 230 230
+           A 45 45, 0,             1,             1,         275 275
+           L 275 230 Z" fill="blue"/>
+</svg>
