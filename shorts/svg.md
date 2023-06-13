@@ -2,6 +2,7 @@
 title: Sample of svg
 permalink: /shorts/svg
 ---
+{% include math.html %}
 
 
 <!-- <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"> -->
@@ -17,7 +18,7 @@ permalink: /shorts/svg
 <!-- </svg> -->
 
 
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="250" version="2" xmlns="http://www.w3.org/2000/svg">
   <!-- rect -->
   <rect x="10" y="10" width="30" height="30" fill="transparent" stroke="black" stroke-width="5"/>
   <rect x="60" y="10" rx="10" ry="10" width="30" height="30" fill="transparent" stroke="black" stroke-width="5"/>
@@ -157,12 +158,7 @@ permalink: /shorts/svg
       fill="green"
       fill-opacity="0.5"
   />
-  <ellipse
-      cx="136.275" cy="188.725"
-      rx="50" ry="30"
-      stroke="red" stroke-width="5"
-      fill="transparent"
-  />
+  <ellipse cx="136.275" cy="188.725" rx="50" ry="30" stroke="red" stroke-width="5" fill="transparent" />
 </svg>
 
 
@@ -187,3 +183,49 @@ permalink: /shorts/svg
            A 45 45, 0,             1,             1,         275 275
            L 275 230 Z" fill="blue"/>
 </svg>
+
+
+<hr>
+
+
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" stroke="black"/>
+  <text>
+    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+      A curve.
+    </textPath>
+  </text>
+  <!-- dominant-baseline can be auto, middle or hanging -->
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: middle;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg>
+
+
+<hr>
+
+### Transformations!
+All set with the `transform` presentation attribute
+
+#### Translate$(x, y)$
+
+<svg width="40" height="50" style="background-color:#bff;">
+  <rect x="0" y="0" width="10" height="10" transform="translate(20,30)" />
+</svg>
+
+<hr>
+
+#### Rotate$(\theta)$
+
+<svg width="31" height="31">
+  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+</svg>
+
+<hr>
+
+#### Scaling$(\%)$
