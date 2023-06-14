@@ -5,6 +5,41 @@ permalink: /shorts/svg
 {% include math.html %}
 
 
+#### Matrix transformations
+* Current coordinates are treated as a column vector $$\left[\begin{matrix} x \\ y \\ 1\end{matrix}\right]$$
+
+* The transform attribute string can contain `matrix(a b c d e f)`
+
+* New coordinate is
+<!-- $$\begin{equation}$$ -->
+$$\left[\begin{matrix} a & c & e \\ b & d & f \\ 0 & 0 & 1\end{matrix}\right]\cdot$$
+$$\left[\begin{matrix} x \\ y \\ 1\end{matrix}\right] = $$
+$$\left[\begin{matrix} ax + cy + e \\ bx + dy + f \\ 1\end{matrix}\right]$$
+<!-- $$\end{equation}$$ -->
+
+
+<!-- Do not use xlink; Do not use DTD -->
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events"> -->
+<!--                a x's effect on x              -->
+<!--                b x's effect on y              -->
+<!--                c y's effect on x              -->
+<!--                d y's effect on y              -->
+<!--                e constant effect on x         -->
+<!--                f constant effect on y         -->
+
+
+
+<svg width="300" height="200" style="background-color:#acc;">
+    <circle cx="0" cy="0" r="2" fill="red" />
+    <g fill="white" stroke="green" transform="matrix(1 0 0 1 150 100) matrix(1 0 0 -1 0 0)">
+        <circle cx="0" cy="0" r="2" fill="green" />
+        <line x1="0" x2="150" y1="0" y2="0" stroke="orange" stroke-width="2"/>
+        <line x1="0" x2="0" y1="0" y2="100" stroke="orange" stroke-width="2"/>
+        <circle cx="0" cy="0" r="100" fill="none" stroke="black"/>
+    </g>
+</svg>
+
+
 <!-- <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"> -->
 <!--   <rect width="100%" height="100%" fill="#404040" /> -->
 <!--   <circle cx="150" cy="100" r="80" fill="green" /> -->
@@ -228,4 +263,21 @@ All set with the `transform` presentation attribute
 
 <hr>
 
-#### Scaling$(\%)$
+
+<svg width="40" height="50" style="background-color:#bff;">
+  <rect
+    x="0"
+    y="0"
+    width="10"
+    height="10"
+    transform="rotate(45) translate(30,40)"
+  />
+</svg>
+
+
+<hr>
+
+
+#### Scaling$(sx\ sy)$
+Two numbers between 0 and 1. If only one number is given, it is
+used for both scaling factors.
