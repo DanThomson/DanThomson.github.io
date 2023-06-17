@@ -1,6 +1,6 @@
 ---
 title: Sample of svg
-permalink: /shorts/svg
+permalink: /svg/initial
 ---
 {% include math.html %}
 

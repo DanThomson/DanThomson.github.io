@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Unit Circle</title>
+    <style> svg { border: 1px solid black; } </style>
+    <!-- Someday externally defined importmaps will be supported. Until then, it is commented out. -->
+    <!-- <script type="importmap" src="./importmap.json"></script> -->
+    <script type="importmap">
+        {
+            "imports": {
+                "funcs": "./funcs.mjs",
+                "mouse": "./mouse.mjs"
+            }
+        }
+    </script>
+    <script src="mouse.mjs" type="module" defer></script>
+  </head>
+  <body>
+    <H2>Unit Circle</H2>
+    <svg
+      id="figure"
+      width="300" height="300"
+      viewBox="0 0 300 300"
+      style="background-color:#acc;"
+      xmlns="http://www.w3.org/2000/svg" version="1.1"
+    >
+    <defs>
+        <circle id="point" r="2" fill="green" />
+    </defs>
+        <g transform="matrix(1 0 0 1 150 150) matrix(1 0 0 -1 0 0)">
+            <circle id="unit-circle" cx="0" cy="0" r="100" fill="none" stroke="black"/>
+            <g id="orange-lines" stroke="orange" stroke-width="2" >
+                <line id="mouse-line" x1="0" y1="0" x2="150" y2="0" />
+                <line id="base-line" x1="0" y1="0" x2="150" y2="0" />
+                <line id="hypo-line" x1="100" y1="0" x2="100" y2="0" />
+            </g>
+            <use id="center-point" href="#point" x="0" y="0" />
+            <use id="vertex-point" href="#point" x="100" y="0" />
+            <use id="x-axis-point" href="#point" x="100" y="0" />
+            <use id="one-zero-point" href="#point" x="100" y="0" />
+        </g>
+    </svg>
+    <div id="screen-log"></div>
+  </body>
+</html>

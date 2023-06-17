@@ -1,0 +1,9 @@
+<svg width="300" height="300" style="background-color:#acc;" xmlns="http://www.w3.org/2000/svg">
+    <!-- <circle cx="0" cy="0" r="2" fill="red" /> -->
+    <g fill="white" stroke="green" transform="matrix(1 0 0 1 150 150) matrix(1 0 0 -1 0 0)">
+        <circle cx="0" cy="0" r="2" fill="green" />
+        <line x1="0" y1="0" x2="150" y2="0" stroke="orange" stroke-width="2" id="line" />
+        <!-- <line x1="0" y1="0" x2="0" y2="100" stroke="orange" stroke-width="2"/> -->
+        <circle cx="0" cy="0" r="100" fill="none" stroke="black"/>
+    </g>
+</svg>
