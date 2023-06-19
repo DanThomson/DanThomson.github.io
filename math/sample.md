@@ -14,6 +14,7 @@ permalink: /math/sample
 3. Github [Emoji](https://gist.github.com/rxaviers/7360908)
 4. [Detexify](https://detexify.kirelabs.org/classify.html) -- symbol finder
 5. [Symbols](https://mirrors.mit.edu/CTAN/info/symbols/comprehensive/symbols-a4.pdf)
+6. [Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Basics)
 
 ## Exponential and Logarithmic Functions ([1-5](https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions))
 
