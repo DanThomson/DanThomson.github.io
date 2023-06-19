@@ -2,7 +2,7 @@
 title: Sample of Mathjax
 permalink: /math/sample
 ---
-{% include math.html %}
+{% include MathJax %}
 
 
 # Practice Mathjax / Latex -- starting with some basics of Calculus

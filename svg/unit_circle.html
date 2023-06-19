@@ -1,13 +1,13 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Unit Circle</title>
-    <!-- MathJax! -->
-    <script> MathJax = {tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }, svg: { fontCache: 'global' } };</script>
-    <script async id="MathJax-script" type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"></script>
+    {% include MathJax %}
 
-    <style> svg { border: 1px solid black; } </style>
+    <style> svg { #figure: 1px solid black; } </style>
     <!-- Someday externally defined importmaps will be supported.
     Until then, it is commented out. -->
     <!-- <script type="importmap" src="./importmap.json"></script> -->
@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <H2>Unit Circle</H2>
+    <H2>Unit Circle $\sin(\theta)$</H2>
 
     <svg
       id="figure"
