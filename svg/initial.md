@@ -2,7 +2,7 @@
 title: Sample of svg
 permalink: /svg/initial
 ---
-{% include math.html %}
+{% include MathJax %}
 
 
 #### Matrix transformations
