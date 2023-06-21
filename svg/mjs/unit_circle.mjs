@@ -50,7 +50,7 @@ function mousemove(e) {
     (${Y.toFixed(2)})^2 + (${X.toFixed(2)})^2 = 1 \\
     (${(Y**2).toFixed(2)}) + (${(X**2).toFixed(2)}) = 1
   `;
-  TeX.innerHTML = katex.renderToString(tex);
+  TeX.setHTML(katex.renderToString(tex));
 
 
   // Log below unit circle graph
