@@ -1,6 +1,0 @@
-{
-    "imports": {
-        "funcs": "./funcs.mjs",
-        "mouse": "./mouse.mjs"
-    }
-}
