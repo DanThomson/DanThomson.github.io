@@ -23,7 +23,7 @@ let rest;
 
 function logKey(e) {
   [graphX, graphY, ...rest] = offsetToGraph(e.offsetX, e.offsetY);
-  let vecL = vecLength(graphX, graphY);
+  let vecL = Math.hypot(graphX, graphY);
 
   screenLog.innerText = `
     Mouse  X/Y: ${graphX.toFixed(2)/100}, ${graphY.toFixed(2)/100}
