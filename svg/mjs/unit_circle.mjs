@@ -15,10 +15,10 @@ let TeX = document.querySelector("#TeX");
 let screenLog = document.querySelector("#screen-log");
 
 
-let graphX, graphY;
-let rest;
-
 function mousemove(e) {
+  let graphX, graphY;
+  let rest;
+
   [graphX, graphY, ...rest] = offsetToGraph(e.offsetX, e.offsetY);
 
   let vecL = Math.hypot(graphX, graphY); // vector Length
@@ -26,6 +26,34 @@ function mousemove(e) {
   let X = graphX/vecL;
   let Y = graphY/vecL;
 
+
+  // Updates to lines and points on unit circle graph
+  base_line.x2.baseVal.value = graphX > 0 ? 100 : -100;
+
+  mouse_line.x2.baseVal.value = X * 100;
+  mouse_line.y2.baseVal.value = Y * 100;
+
+  vertex_point.x.baseVal.value = X * 100;
+  vertex_point.y.baseVal.value = Y * 100;
+
+  x_axis_point.x.baseVal.value = X * 100;
+
+  hypo_line.x1.baseVal.value = X * 100;
+  hypo_line.x2.baseVal.value = X * 100;
+  hypo_line.y2.baseVal.value = Y * 100;
+
+
+  // Math equations
+  let tex = String.raw`
+    \sin^2(\theta) + \cos^2(\theta) = 1 \\
+    (\sin(${(Math.asin(Y) * rtod).toFixed()}))^2 + (\cos(${(Math.acos(X) * rtod).toFixed()}))^2 = 1 \\
+    (${Y.toFixed(2)})^2 + (${X.toFixed(2)})^2 = 1 \\
+    (${(Y**2).toFixed(2)}) + (${(X**2).toFixed(2)}) = 1
+  `;
+  TeX.innerHTML = katex.renderToString(tex);
+
+
+  // Log below unit circle graph
   screenLog.innerText = `
     Mouse  X/Y: ${graphX.toFixed(2)/100}, ${graphY.toFixed(2)/100}
     Circle X/Y: ${X.toFixed(2)}, ${Y.toFixed(2)}
@@ -34,27 +62,4 @@ function mousemove(e) {
     ArcCos: ${Math.acos(X).toFixed(2)}, ${(Math.acos(X) * rtod).toFixed()}
     ArcTan: ${Math.atan(Y/X).toFixed(2)}, ${(Math.atan(Y/X) * rtod).toFixed()}
   `;
-
-  base_line.x2.baseVal.value = graphX > 0 ? 150 : -150;
-
-  mouse_line.x2.baseVal.value = graphX;
-  mouse_line.y2.baseVal.value = graphY;
-
-  vertex_point.x.baseVal.value = (graphX/vecL) * 100;
-  vertex_point.y.baseVal.value = (graphY/vecL) * 100;
-
-  x_axis_point.x.baseVal.value = (graphX/vecL) * 100;
-
-  hypo_line.x1.baseVal.value = (graphX/vecL) * 100;
-  hypo_line.x2.baseVal.value = (graphX/vecL) * 100;
-  hypo_line.y2.baseVal.value = (graphY/vecL) * 100;
-
-
-  let tex = String.raw`
-  \sin^2(\theta) + \cos^2(\theta) = 1 \\
-  (\sin(${(Math.asin(Y) * rtod).toFixed()}))^2 + (\cos(${(Math.acos(X) * rtod).toFixed()}))^2 = 1 \\
-  (${Y.toFixed(2)})^2 + (${X.toFixed(2)})^2 = 1 \\
-  (${(Y**2).toFixed(2)}) + (${(X**2).toFixed(2)}) = 1
-  `;
-  TeX.innerHTML = katex.renderToString(tex);
 }
