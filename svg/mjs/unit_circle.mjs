@@ -2,9 +2,6 @@ import { offsetToGraph, rtod, dtor } from "funcs";
 import katex from "katex";
 
 
-// let figure = document.querySelector("#figure");
-// figure.addEventListener("mousemove", mousemove);
-
 document.querySelector("#figure").addEventListener("mousemove", mousemove);
 
 let hypo_line = document.querySelector("line#hypo-line");
