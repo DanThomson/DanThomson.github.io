@@ -1,5 +1,5 @@
 // Static LaTeX
-import katex from "katex"
+import katex from "katex";
 
 
 document.querySelectorAll(".staticTeX").forEach(

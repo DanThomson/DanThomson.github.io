@@ -1,4 +1,4 @@
-import katex from "katex"
+import katex from "katex";
 
 
 // Function which takes three DOM nodes and sets up input listener
