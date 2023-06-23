@@ -30,8 +30,8 @@ url: "https://DanThomson.github.io"
 # Build settings
 plugins:
   - jekyll-feed
-  # - jekyll-remote-theme
   - jemoji
+  # - jekyll-remote-theme
 
 
 # Supported themes:
