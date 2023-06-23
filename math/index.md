@@ -1,11 +1,9 @@
 ---
-title: Sample of Mathjax
+title: Math
 permalink: /math
 ---
-{% include MathJax %}
 
-# Practice Mathjax / Latex -- starting with some basics of Calculus
-
+# Practice Mathjax / Latex
 
 - Basics
     - [Precalc_formulas](basics/precalc_formulas)

@@ -1,4 +1,5 @@
 ---
+title:  Problem 236
 permalink: /math/ch3/problem_236
 ---
 {% include MathJax %}

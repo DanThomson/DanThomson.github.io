@@ -6,7 +6,7 @@ permalink: /math/differentiation/product_rule
   <head>
     {% include favicon %}
     <meta charset="utf-8">
-    <title>Product Rule</title>
+    <title>Product Rule of Differentiation</title>
 
     <!-- css -->
     {% include KaTeX_style %}
@@ -28,7 +28,7 @@ permalink: /math/differentiation/product_rule
 
   <body>
     <h1>Product Rule of Differentiation</h1>
-    <h3>This is only known to work on Chrome / Chromium</h3>
+    <h3>This is only known to work on Google Chrome</h3>
     <div class="staticTeX padded">
       <span class="origTeX">
         d(\,u(x) \cdot v(x)\,) = du\cdot v + u\cdot dv
@@ -40,14 +40,14 @@ permalink: /math/differentiation/product_rule
 
     <div class="padded row-container">
       <div>
-        <input id="ux" name="ux" type="text" size="20" class="inode padded">
+        <input id="ux" name="ux" type="text" size="20" class="inode padded" placeholder="x^2">
         <div>
           <div id="ux_errors" class="vcentered errorlog"></div>
         </div>
         <div id="ux_out" class="vcentered" datalabel="u(x)=\,\,"></div>
       </div>
       <div>
-        <input id="vx" name="vx" type="text" size="20" class="inode padded">
+        <input id="vx" name="vx" type="text" size="20" class="inode padded" placeholder="\sin^2(x)">
         <div>
           <div id="vx_errors" class="vcentered errorlog"></div>
         </div>
@@ -59,14 +59,14 @@ permalink: /math/differentiation/product_rule
 
     <div class="padded row-container">
       <div>
-        <input id="dux" name="dux" type="text" size="20" class="inode padded">
+        <input id="dux" name="dux" type="text" size="20" class="inode padded" placeholder="2 \cdot x">
         <div>
           <div id="dux_errors" class="vcentered errorlog"></div>
         </div>
         <div id="dux_out" class="vcentered" datalabel="du=\,\,"> </div>
       </div>
       <div>
-        <input id="dvx" name="dvx" type="text" size="20" class="inode padded">
+        <input id="dvx" name="dvx" type="text" size="20" class="inode padded" placeholder="2 \cdot \sin(x) \cdot \cos(x)">
         <div>
           <div id="dvx_errors" class="vcentered errorlog"></div>
         </div>

@@ -1,4 +1,5 @@
 ---
+title: Derivative of Cosecant
 permalink: /math/ch3/cosecant_problem
 ---
 {% include MathJax %}
