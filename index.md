@@ -7,5 +7,8 @@ title: Home
 # For now, all documentation here should be considered **untested** works in progress.
 
 
-### [Bash Conditionals](shorts/bash_conditionals.md)
-### [Bash Completions](shorts/bash_completions.md)
+- [Math](./math)
+
+- Bash
+    - [Conditionals](./shorts/bash_conditionals)
+    - [Completions](./shorts/bash_completions)

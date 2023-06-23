@@ -30,16 +30,18 @@ url: "https://DanThomson.github.io"
 # Build settings
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
   - jemoji
 
 
 # Supported themes:
 # [Jekyll Themes](https://pages.github.com/themes/)
+#
+# The following comment lines are themes which I have previously used.
 # theme: jekyll-theme-dinky
 # remote_theme: pages-themes/dinky@v0.2.0
-theme: jekyll-theme-minimal
-remote_theme: pages-themes/minimal@v0.2.0
+# theme: jekyll-theme-minimal
+# remote_theme: pages-themes/minimal@v0.2.0
 
 
 exclude:
