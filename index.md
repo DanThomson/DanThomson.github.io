@@ -3,8 +3,9 @@
 title: Home
 ---
 
-<!-- # These are my notes which will become HOWTOs and tutorials. -->
-# For now, all documentation here should be considered **untested** works in progress.
+# These are my notes which will become HOWTOs and tutorials after I refine them.
+### For now, all documentation here should be considered **untested** works in progress.
+### Most pages here are intended solely for the author
 
 
 - [Math](./math)

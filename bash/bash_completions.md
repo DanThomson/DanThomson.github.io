@@ -1,3 +1,5 @@
+---
+---
 # Add commandline completion to your command
 
 For this explanation assume your new command is named `sc`,
