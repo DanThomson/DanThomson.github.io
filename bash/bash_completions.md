@@ -1,4 +1,5 @@
 ---
+title: Bash Completions
 ---
 # Add commandline completion to your command
 

@@ -1,4 +1,5 @@
 ---
+title: Bash Conditionals
 ---
 # Bash conditionals
 

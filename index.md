@@ -11,5 +11,5 @@ title: Home
 - [Math](./math)
 
 - Bash
-    - [Conditionals](./shorts/bash_conditionals)
-    - [Completions](./shorts/bash_completions)
+    - [Conditionals](./bash/bash_conditionals)
+    - [Completions](./bash/bash_completions)

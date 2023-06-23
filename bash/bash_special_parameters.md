@@ -1,4 +1,5 @@
 ---
+title: Bash Special Parameters
 ---
    Special Parameters
        The shell treats several parameters specially.  These parameters may only be referenced; assignment to them is not allowed.

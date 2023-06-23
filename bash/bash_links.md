@@ -1,4 +1,5 @@
 ---
+title: Bash Links
 ---
 #### This next link has lots of detail. A must read before putting any shell scripts in production.
 [Filenames and Pathnames in Shell](https://dwheeler.com/essays/filenames-in-shell.html)
