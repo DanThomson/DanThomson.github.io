@@ -6,13 +6,13 @@ permalink: /math
 # Practice Mathjax / Latex / Calculus
 
 - Basics
-    - [Precalc formulas](math/basics/precalc_formulas)
-    - [Unit circle](math/basics/unit_circle)
+    - [Precalc formulas](./basics/precalc_formulas)
+    - [Unit circle](./basics/unit_circle)
 - Differentiation
-    - [Product rule](math/differentiation/product_rule)
+    - [Product rule](./differentiation/product_rule)
 - Ch3
-    - [Problem 236](math/ch3/problem_236)
-    - [Cosecant problem](math/ch3/cosecant_problem)
+    - [Problem 236](./ch3/problem_236)
+    - [Cosecant problem](./ch3/cosecant_problem)
 
 
 ## References
