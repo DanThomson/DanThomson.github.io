@@ -1,6 +1,6 @@
 ---
 title: Sample of x3dom
-permalink: /shorts/x3dom
+permalink: /x3dom/
 ---
 {% include x3dom.html %}
 

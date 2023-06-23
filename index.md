@@ -8,8 +8,10 @@ title: Home
 ### Most pages here are intended solely for the author
 
 
-- [Math](./math)
+- [Math](./math/)
 
 - Bash
     - [Conditionals](./bash/bash_conditionals)
     - [Completions](./bash/bash_completions)
+
+- [x3dom](./x3dom/)
