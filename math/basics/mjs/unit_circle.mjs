@@ -1,6 +1,11 @@
 import { offsetToGraph, rtod, dtor } from "funcs";
 import katex from "katex";
 
+// Radians * (180 / Math.PI) = degrees
+const rtod = 180 / Math.PI;
+// Degrees * (Math.PI / 180) = radians
+const dtor = Math.PI / 180;
+
 
 document.querySelector("#figure").addEventListener("mousemove", mousemove);
 
@@ -13,6 +18,11 @@ let x_axis_point = document.querySelector("#x-axis-point");
 
 let TeX = document.querySelector("#TeX");
 let screenLog = document.querySelector("#screen-log");
+
+
+function offsetToGraph(x, y) {
+  return [(x - 150), -(y - 150)];
+}
 
 
 function mousemove(e) {

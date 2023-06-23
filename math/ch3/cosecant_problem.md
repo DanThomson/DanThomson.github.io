@@ -1,4 +1,5 @@
 ---
+permalink: /math/ch3/cosecant_problem
 ---
 {% include MathJax %}
 

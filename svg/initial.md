@@ -4,6 +4,8 @@ permalink: /svg/initial
 ---
 {% include MathJax %}
 
+# Exploration of SVG using examples from [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG)
+### Only tested on Google Chrome
 
 #### Matrix transformations
 * Current coordinates are treated as a column vector $$\left[\begin{matrix} x \\ y \\ 1\end{matrix}\right]$$

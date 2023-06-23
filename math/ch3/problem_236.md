@@ -1,4 +1,5 @@
 ---
+permalink: /math/ch3/problem_236
 ---
 {% include MathJax %}
 
