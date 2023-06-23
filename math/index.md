@@ -1,6 +1,6 @@
 ---
 title: Math
-permalink: /math
+permalink: /math/
 ---
 
 # Practice Mathjax / Latex / Calculus
