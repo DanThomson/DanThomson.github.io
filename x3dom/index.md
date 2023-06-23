@@ -2,7 +2,7 @@
 title: Sample of x3dom
 permalink: /x3dom/
 ---
-{% include x3dom.html %}
+{% include x3dom %}
 
 
 # The Hello, World! of x3dom
