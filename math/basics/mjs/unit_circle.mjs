@@ -1,4 +1,3 @@
-import { offsetToGraph, rtod, dtor } from "funcs";
 import katex from "katex";
 
 // Radians * (180 / Math.PI) = degrees
