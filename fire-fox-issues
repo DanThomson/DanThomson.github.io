@@ -1,0 +1,7 @@
+1) Firefox does not support setHTML, so replace that with
+    sanitation followed by assigning a string to .innerHTML.
+
+2) Firefox does not seem to be supporting bare imports from
+    locations defined in importmap. I suspect firefox supports such
+    imports when they are made by scripts located within the html, but
+    not to scripts linked from the html.
