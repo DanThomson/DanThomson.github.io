@@ -30,7 +30,7 @@ let dvx = document.querySelector('#dvx');
           let chainrule = document.querySelector('#chainrule');
           let chainrule_TeX = String.raw`
             d(u \cdot v) =  d(${ux.value} \cdot ${vx.value})=
-            ${dux.value} \cdot ${vx.value} + ${ux.value} \cdot ${dvx.value}
+            ${vx.value} \cdot ${dux.value} + ${ux.value} \cdot ${dvx.value}
           `;
           // chainrule.setHTML(katex.renderToString(chainrule_TeX));
           chainrule.innerHTML = katex.renderToString(chainrule_TeX);
