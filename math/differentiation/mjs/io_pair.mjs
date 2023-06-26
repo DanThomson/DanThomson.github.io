@@ -1,5 +1,6 @@
 // TODO: replace setHTML for firefox
-import katex from 'katex';
+// import katex from 'katex';
+import katex from 'https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.mjs';
 
 
 // Function which takes three DOM nodes and sets up input listener
