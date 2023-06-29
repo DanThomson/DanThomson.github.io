@@ -11,6 +11,7 @@ permalink: /math/differentiation/product_rule
     <!-- css -->
     {% include KaTeX_style %}
     <link href="./style.css" rel="stylesheet">
+    <link href="/math/css/staticTeX.css" rel="stylesheet">
 
     <!-- scripts -->
     <script type="importmap">
@@ -22,8 +23,8 @@ permalink: /math/differentiation/product_rule
         }
       }
     </script>
+    <script src="/math/mjs/staticTeX.mjs" type="module" defer></script>
     <script src="./mjs/io_pair.mjs" type="module" defer></script>
-    <script src="./mjs/staticTeX.mjs" type="module" defer></script>
     <script src="./mjs/product_rule.mjs" type="module" defer></script>
   </head>
 
@@ -32,23 +33,31 @@ permalink: /math/differentiation/product_rule
     <!-- <h3>This is only known to work on Google Chrome</h3> -->
     <div class="staticTeX padded">
       <span class="origTeX">
-        d(\,u(x) \cdot v(x)\,) = v \cdot du + u\cdot dv
+        d(\,u(x) \cdot v(x)\,) = v \cdot du \;+\; u\cdot dv
       </span>
       <!-- staticTeX.mjs will add a div here -->
     </div>
 
-    <p class="padded">In the four boxes below fill in u(x), v(x), du, and dv. After you enter dv, press the tab key.</p>
+    <div class="staticTeX padded">In the four boxes below fill in
+      <span class="origTeX">u(x)</span>,
+      <span class="origTeX">v(x)</span>,
+      <span class="origTeX">du</span>,
+      <span class="origTeX">dv</span>.
+      After you enter <span class="origTeX">dv</span>, press the tab key.
+    </div>
 
-    <div class="padded row-container">
+    <div class="padded row-container staticTeX">
       <div>
-        <input id="ux" name="ux" type="text" size="20" class="inode padded" placeholder="x^2">
+        <label><span class="origTeX">\;u(x)</span></label><br />
+        <input id="ux" name="ux" type="text" size="20" class="inode padded" placeholder="x^2" value="x^2">
         <div>
           <div id="ux_errors" class="vcentered errorlog"></div>
         </div>
         <div id="ux_out" class="vcentered" datalabel="u(x)=\,\,"></div>
       </div>
       <div>
-        <input id="vx" name="vx" type="text" size="20" class="inode padded" placeholder="\sin^2(x)">
+        <label><span class="origTeX">\;v(x)</span></label><br />
+        <input id="vx" name="vx" type="text" size="20" class="inode padded" placeholder="\sin^2(x)" value="\sin^2(x)">
         <div>
           <div id="vx_errors" class="vcentered errorlog"></div>
         </div>
@@ -58,16 +67,18 @@ permalink: /math/differentiation/product_rule
 
     <div class="triple-padded"></div>
 
-    <div class="padded row-container">
+    <div class="padded row-container staticTeX">
       <div>
-        <input id="dux" name="dux" type="text" size="20" class="inode padded" placeholder="2 \cdot x">
+        <label><span class="origTeX">\;du</span></label></br />
+        <input id="dux" name="dux" type="text" size="20" class="inode padded" placeholder="2 \cdot x" value="2 \cdot x \cdot d(x)">
         <div>
           <div id="dux_errors" class="vcentered errorlog"></div>
         </div>
         <div id="dux_out" class="vcentered" datalabel="du=\,\,"> </div>
       </div>
       <div>
-        <input id="dvx" name="dvx" type="text" size="20" class="inode padded" placeholder="2 \cdot \sin(x) \cdot \cos(x)">
+        <label><span class="origTeX">\;dv</span></label></br />
+        <input id="dvx" name="dvx" type="text" size="20" class="inode padded" placeholder="2 \cdot \sin(x) \cdot \cos(x)" value="2 \cdot \sin(x) \cdot \cos(x) \cdot d(x)">
         <div>
           <div id="dvx_errors" class="vcentered errorlog"></div>
         </div>
@@ -75,6 +86,7 @@ permalink: /math/differentiation/product_rule
       </div>
     </div>
 
+    <div class="triple-padded"></div>
     <div class="triple-padded"></div>
 
     <div id="chainrule" class="padded vcentered" datalabel=""> </div>

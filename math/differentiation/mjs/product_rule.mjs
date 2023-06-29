@@ -29,8 +29,14 @@ let dvx = document.querySelector('#dvx');
         if ( ux.value && vx.value && dux.value && dvx.value ) {
           let chainrule = document.querySelector('#chainrule');
           let chainrule_TeX = String.raw`
-            d(u \cdot v) =  d(${ux.value} \cdot ${vx.value})=
-            {${vx.value}} \cdot {${dux.value}} + {${ux.value}} \cdot {${dvx.value}}
+            \begin{array}
+{l      c           r          c          r                    c                     r                   c                       c                 c                      c            c                          }
+% &              &     &               &     &                                    &     &                                       & &
+d(&     u        &\cdot&       v       &)=\; &                                    &     &                                       & &                                    &     &                                    \\
+  &              &     &               & =\; &                 v                  &\cdot&                 du                    &+&                u                   &\cdot&         dv                         \\
+d(&{${ux.value}} &\cdot& {${vx.value}} &)=\; &  \overbrace{{${vx.value}} }^{    } &\cdot&  \overbrace{ {${dux.value}} }^{  }\;  &+&  \overbrace{ {${ux.value}} }^{    }&\cdot&  \overbrace{ {${dvx.value}} }^{  }\\
+
+            \end{array}
           `;
           // chainrule.setHTML(katex.renderToString(chainrule_TeX));
           chainrule.innerHTML = katex.renderToString(chainrule_TeX);

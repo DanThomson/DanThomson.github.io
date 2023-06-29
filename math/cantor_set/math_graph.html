@@ -1,0 +1,119 @@
+---
+permalink: /math/cantor_set
+---
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    {% include favicon %}
+    <meta charset="utf-8">
+    <title>Cantor Set</title>
+
+    <!-- css -->
+    {% include KaTeX_style %}
+    <link href="./style.css" rel="stylesheet">
+    <link href="/math/css/staticTeX.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          {% include KaTeX_imports %},
+          "cantor_set": "./mjs/cantor.mjs"
+        }
+      }
+    </script>
+    <script src="/math/mjs/staticTeX.mjs" type="module" defer></script>
+    <script src="./mjs/cantor_set.mjs" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="staticTeX padded">
+      Let <span class="origTeX">C_0</span> be the closed interval
+      <span class="origTeX"> [0,1]</span>
+    </div>
+
+    <div class="staticTeX padded">
+      And define <span class="origTeX">C_1</span> to be the set that
+      results when the open middle third is removed.
+    </div>
+    <div class="staticTeX padded">
+      That is
+      <span class="origTeX">
+        C_1 = C_0 \setminus \left(\frac{1}{3}, \frac{2}{3}\right) = \left[0, \frac{1}{3}\right] \cup \left[\frac{2}{3}, 1\right]
+      </span>
+    </div>
+    <div class="staticTeX padded">
+      Now construct <span class="origTeX">C_2</span> in a similar way. By removing the open middle third of each of the two components of <span class="origTeX">C_1</span>.
+    </div>
+    <div class="staticTeX padded">
+      <span class="origTeX">
+        C_2 =
+        \left(\left[0, \frac{1}{9}           \right]  \cup  \left[\frac{2}{9}, \frac{1}{3} \right] \right)
+        \cup
+        \left(\left[\frac{2}{3}, \frac{7}{9} \right]  \cup  \left[\frac{8}{9}, 1           \right] \right)
+      </span>
+    </div>
+    <!-- If we continue this process inductively, then for each n = 0, 1, 2, \ldots we get a set C_n consisting of 2^n closed intervals each having length \frac{1}{3}^n. Finally, we defin the cantor set C to be the intersection -->
+    <div class="staticTeX padded">
+      <span class="origTeX">C = \overset{\infty}{\underset{n=0}{\bigcap}} C_n</span>
+    </div>
+
+    <div>
+      Lets think about dimension for a little bit.
+      <table>
+        <tr>
+          <th>Structure</th><th>Dimension</th><th>Size</th><th>Size 3X</th>
+        </tr>
+        <tr>
+          <td>Point</td> <td> 0</td> <td> 1</td> <td> 1</td> <td> * 3^0</td>
+        </tr>
+        <tr>
+          <td>Line segment</td> <td> 1</td> <td> 1</td> <td> 3</td> <td> *  3^1</td>
+        </tr>
+        <tr>
+          <td>Square</td><td> 2</td><td> 1</td><td> 9</td> <td> * 3^2</td>
+        </tr>
+        <tr>
+          <td>Cube</td><td> 3</td><td> 1</td><td> 27</td> <td> * 3^3</td>
+        </tr>
+        <tr>
+          <td>Cantor set</td><td>?</td><td> 1</td><td> 2</td><td> * 3^?</td>
+        </tr>
+      </table>
+
+      <div class="staticTeX padded">
+        <span class="origTeX">
+          2 = 3^? \rightarrow\; ? = \frac{\ln 2}{\ln 3} \, \approx \, 0.631
+        </span>
+      </div>
+    </div> WTF?!? The Cantor set has dimension of 0.631? </div>
+
+    <!-- What happens when we increase their scale by 3? -->
+    <!-- a point is still a point -->
+
+    <!-- a line segment of length l becomes -->
+    </hr>
+
+    <!-- <div style="padding-top: 10px;"> -->
+    <!--   <svg -->
+    <!--       id="figure" -->
+    <!--       width="300" height="300" -->
+    <!--                   viewBox="0 0 300 300" -->
+    <!--                   style="background-color:#acc;" -->
+    <!--                   xmlns="http://www.w3.org/2000/svg" version="1.1" -->
+    <!--                                                      > -->
+    <!--                                                      <defs> -->
+    <!--                                                      <circle id="point" r="2" fill="green" /> -->
+    <!--                                                      </defs> -->
+    <!--     <g transform="matrix(1 0 0 1 150 150) matrix(1 0 0 -1 0 0)"> -->
+    <!--     <line id="" x1="0" y1="0" x2="150" y2="0" stroke="black" /> -->
+    <!--     <line id="" x1="0" y1="0" x2="0" y2="100" stroke="black" /> -->
+    <!--     <use id="center-point" href="#point" x="0" y="0" /> -->
+
+    <!--     <!-1- Create a one dimensional graph from -1 to 3 -1-> -->
+    <!--     <!-1- mark 1/3s -1-> -->
+    <!--     </g> -->
+    <!--   </svg> -->
+    <!-- </div> -->
+  </body>
+</html>
