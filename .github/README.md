@@ -17,6 +17,7 @@
 * Github [Emoji](https://gist.github.com/rxaviers/7360908)
 * [Making Readmes Readable](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md)
 * [My Own Markdown Sampler](docs/sampler_of_markdown.md) *wip*
+* [KaTeX Supported Functions] (https://katex.org/docs/supported.html)
 
 
 ### Local Links
@@ -27,6 +28,5 @@
 
 
 ### Installation required for local development of GitHub Pages
-
 1. [HOWTO install ruby](docs/ruby_on_archlinux.md)
 2. [HOWTO github pages](docs/jekyll_on_github.md)
