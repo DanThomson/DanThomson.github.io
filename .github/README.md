@@ -23,7 +23,7 @@
 ### Local Links
 [My GitHub Page](https://DanThomson.github.io/)
 [Math](https://DanThomson.github.io/math)
-[Bash / Shell](https://DanThomson.github.io/bash) *placeholder* / *comming soon*
+[Bash / Shell](https://DanThomson.github.io/bash) *placeholder* / *coming soon*
 
 
 
