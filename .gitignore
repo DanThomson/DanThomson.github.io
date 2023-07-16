@@ -3,8 +3,10 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+python
 
 # Adding gemfile.lock because frankly, I don't know enough of
 # ruby's dependencies best practices to get this right. What's in
 # my Gemfile.lock ummm...? Yeah, that doesn't need to be archived.
 Gemfile.lock
+
