@@ -1,12 +1,80 @@
 ---
+permalink: /svg/turtle
 ---
-# Todo
-- copy in html boilerplate
-- Turtle code should work with an existing svg element. It will create a path object who's g attribute is written based on the turtle code.
-- Future implentations should have text boxes which allow the setting of variables like step size and turn angle.
-- Then create code which will create a sequence of successive svg elements each of which displaying a rewrite of the original turtle code along with the interpertation.
+<!DOCTYPE html>
+<html lang='en-US'>
+  <head>
+    {% include favicon %}
+    <meta charset='utf-8'>
+    <title>Turtle Graphics / SVG demo</title>
 
-## Remember, starting out it is just html boilerplate, an svg element, and a path element.
+    <!-- css -->
+    <link href="./style.css" rel="stylesheet">
 
-## Future ideas
-- On page 11 of ABoP, there are references to the inference problem, and graph grammers. Both could be interesting followups.
+    <!-- scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          "controls": "./mjs/turtle_controls.mjs",
+          "movement": "./mjs/turtle_movement.mjs"
+        }
+      }
+    </script>
+    <script src='./mjs/turtle.mjs' type='module' defer></script>
+  </head>
+
+  <body>
+    <h1>Turtle Graphics / SVG demo</h1>
+    <h4>This is only known to work on Google Chrome</h3>
+
+    <!-- Controls -->
+    <div id='controls'>
+      <div>
+        <label for='gen_count' >Generation count</label><br />
+        <input id='gen_count' name='gen_count' type='number' min='1' max='10' class='inode padded' placeholder='3' value='1'>
+      </div>
+      <div>
+        <label><span class=''>Step length</span></label><br />
+        <input id='step_length' name='step_length' type='text' size='2' class='inode padded' placeholder='10' value='10'>
+      </div>
+      <div>
+        <label><span class=''>Initial phrase</span></label><br />
+        <input id='initial_phrase' name='initial_phrase' type='text' size='10' class='inode padded' placeholder='F' value='F'>
+      </div>
+      <div>
+        <label><span class=''>F replacement</span></label><br />
+        <input id='f_replacement' name='f_replacement' type='text' size='10' class='inode padded' placeholder='F' value='F'>
+      </div>
+      <!-- <button id="remember_to_add_buttons">Button text</button> -->
+    </div>
+
+    <div id='figures' style='padding-top: 10px;'>
+      <svg
+        width='300' height='300'
+        viewbox='0 0 300 300'
+        style='background-color:#acc; margin:10px;'
+        xmlns='http://www.w3.org/2000/svg' version='1.1'
+      >
+        <g transform='matrix(1 0 0 1 150 150) matrix(1 0 0 -1 0 0)'>
+          <path id='turtle_path' d='M 0 0 ' stroke='black' fill='transparent'/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- <div id=''></div> -->
+
+
+
+
+<!-- - Turtle code should work with an existing svg element. -->
+<!-- It will create a path object who's d attribute is written based on the turtle code. -->
+
+<!-- - Future implentations should have text boxes which allow the setting of variables like step size and turn angle. -->
+<!-- - Then create code which will create a sequence of successive svg elements each of which displaying a rewrite of the original turtle code along with the interpertation. -->
+
+<!-- ## Future ideas -->
+<!-- - On page 11 of ABoP, there are references to the inference problem, and graph grammers. -->
+<!-- Both could be interesting followups. -->
+
+  </body>
+</html>
