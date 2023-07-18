@@ -7,17 +7,17 @@ import controls from 'controls';
 function step_forward(path_d, turtle_direction, step_length){
   let dy, dx;
 
-  dy = step_length * Math.sin(turtle_direction);
-  dx = step_length * Math.cos(turtle_direction);
+  dy = Math.round(step_length * Math.sin(turtle_direction));
+  dx = Math.round(step_length * Math.cos(turtle_direction));
 
-  return `l ${dx} ${dy} `;
+  return `${dx} ${dy} `;
 }
 
 
 function drawPath (turtle_path, commands) {
   const step_length = controls.get_step_length();
   const turn_angle = controls.get_turn_angle();
-  let path_d = 'M 5 5 ';  // Start in top left corner
+  let path_d = 'M 5 5 l ';  // Start in top left corner
   let turtle_direction = Math.PI / 2;  // Start facing down
 
   for (let c of commands) {
