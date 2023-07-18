@@ -10,13 +10,13 @@ permalink: /svg/turtle
   <head>
     {% include favicon %}
     <meta charset='utf-8'>
-    <title>Turtle Graphics / SVG demo</title>
+    <title>Turtle Graphics - Section 1.3 of ABoP</title>
 
     <!-- css -->
-    <link href="./style.css" rel="stylesheet">
+    <link href='./style.css' rel='stylesheet'>
 
     <!-- scripts -->
-    <script type="importmap">
+    <script type='importmap'>
       {
         "imports": {
           "controls": "./mjs/turtle_controls.mjs",
@@ -28,40 +28,44 @@ permalink: /svg/turtle
   </head>
 
   <body>
-    <h1>Turtle Graphics / SVG demo</h1>
+    <h1>Turtle Graphics - Section 1.3 of ABoP</h1>
     <h4>This is only known to work on Google Chrome</h3>
 
     <!-- Controls -->
-    <div id='controls'>
-      <div>
+    <div id='controls' class='row-container'>
+      <div class='padded'>
         <label for='gen_count' >Generation count</label><br />
-        <input id='gen_count' name='gen_count' type='number' min='1' max='10' class='inode padded' placeholder='3' value='1'>
+        <input id='gen_count' name='gen_count' type='number' min='1' max='10' class='padded' value='1' />
       </div>
-      <div>
-        <label><span class=''>Step length</span></label><br />
-        <input id='step_length' name='step_length' type='text' size='2' class='inode padded' placeholder='10' value='10'>
+      <div class='padded'>
+        <label for'step_length'>Step length</label><br />
+        <input id='step_length' name='step_length' type='number' class='padded' value='10' min='2' max='100'/>
       </div>
-      <div>
-        <label><span class=''>Initial phrase</span></label><br />
-        <input id='initial_phrase' name='initial_phrase' type='text' size='10' class='inode padded' placeholder='F' value='F'>
+      <div class='padded'>
+        <label for'turn_angle'>Turn angle</label><br />
+        <input id='turn_angle' name='turn_angle' type='number' class='padded' value='90' min='0' max='180'/>
       </div>
-      <div>
-        <label><span class=''>F replacement</span></label><br />
-        <input id='f_replacement' name='f_replacement' type='text' size='10' class='inode padded' placeholder='F' value='F'>
+      <div class='padded'>
+        <label for'initial_phrase'>Initial phrase</label><br />
+        <input id='initial_phrase' name='initial_phrase' type='text' size='10' class='padded' placeholder='F' value='F-F-F-F' />
       </div>
-      <!-- <button id="remember_to_add_buttons">Button text</button> -->
+      <div class='padded'>
+        <label for='f_replacement'>F replacement</label><br />
+        <input id='f_replacement' name='f_replacement' type='text' size='10' class='padded' placeholder='F' value='FF-F-F-F-FF' />
+      </div>
+      <button id='update'>Update</button>
     </div>
 
     <div id='figures' style='padding-top: 10px;'>
       <svg
-        width='300' height='300'
-        viewbox='0 0 300 300'
+        width='600' height='600'
+        viewbox='0 0 600 600'
         style='background-color:#acc; margin:10px;'
         xmlns='http://www.w3.org/2000/svg' version='1.1'
       >
-        <g transform='matrix(1 0 0 1 150 150) matrix(1 0 0 -1 0 0)'>
-          <path id='turtle_path' d='M 0 0 ' stroke='black' fill='transparent'/>
-        </g>
+        <!-- <g transform='matrix(1 0 0 1 300 300) matrix(1 0 0 -1 0 0)'> -->
+        <path d='M 0 0 ' stroke='black' fill='transparent' class='turtle_path' />
+        <!-- </g> -->
       </svg>
     </div>
   </body>
