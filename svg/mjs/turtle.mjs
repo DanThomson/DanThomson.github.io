@@ -5,7 +5,6 @@ import controls from 'controls';
 
 
 function step_forward(path_d, turtle_direction, step_length){
-  // let path_d = turtle_path.getAttribute('d');
   let dy, dx;
 
   dy = step_length * Math.sin(turtle_direction);
@@ -43,15 +42,13 @@ function drawPath (turtle_path, commands) {
   turtle_path.setAttribute('d', path_d);
 }
 
-// Pattern p = Pattern.compile("[,. ]+");
-// // repeat only the following part:
-// String output = p.matcher(input).replaceAll("");
 
 function rewrite_commands (commands, f_replacement) {
   if (commands === '') {
     return controls.get_initial_phrase();
   }
-  return commands.replaceAll('F', f_replacement)
+  const re = /F/g;
+  return commands.replaceAll(re, f_replacement)
 }
 
 
