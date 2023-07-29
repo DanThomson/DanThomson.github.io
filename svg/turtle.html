@@ -35,27 +35,36 @@ permalink: /svg/turtle
     <div id='controls' class='row-container'>
       <div class='padded'>
         <label for='gen_count' >Generation count</label><br />
-        <input id='gen_count' name='gen_count' type='number' min='1' max='7' class='padded' value='1' />
+        <input id='gen_count' name='gen_count' type='number' min='1' max='7' class='padded' value='7' />
       </div>
       <div class='padded'>
         <label for'step_length'>Step length</label><br />
-        <input id='step_length' name='step_length' type='number' class='padded' value='5' min='2' max='100'/>
+        <input id='step_length' name='step_length' type='number' class='padded' value='10' min='2' max='100'/>
       </div>
       <div class='padded'>
         <label for'turn_angle'>Turn angle</label><br />
-        <input id='turn_angle' name='turn_angle' type='number' class='padded' value='90' min='0' max='180'/>
+        <input id='turn_angle' name='turn_angle' type='number' class='padded' value='60' min='0' max='180'/>
       </div>
       <div class='padded'>
         <label for'initial_phrase'>Initial phrase</label><br />
-        <input id='initial_phrase' name='initial_phrase' type='text' size='10' class='padded' placeholder='F' value='F-F-F-F' />
+        <input id='initial_phrase' name='initial_phrase' type='text' size='10' class='padded' placeholder='F' value='R' />
       </div>
       <div class='padded'>
         <label for='f_replacement'>F replacement</label><br />
-        <input id='f_replacement' name='f_replacement' type='text' size='10' class='padded' placeholder='F' value='FF-F-F-F-FF' />
+        <input id='f_replacement' name='f_replacement' type='text' size='10' class='padded' placeholder='F' value='ff-f-f-f-ff' />
+      </div>
+      <div class='padded'>
+        <label for='r_replacement'>R replacement</label><br />
+        <input id='r_replacement' name='r_replacement' type='text' size='10' class='padded' placeholder='F' value='l-r-l' />
+      </div>
+      <div class='padded'>
+        <label for='l_replacement'>L replacement</label><br />
+        <input id='l_replacement' name='l_replacement' type='text' size='10' class='padded' placeholder='F' value='r+l+r' />
       </div>
       <button id='update'>Update</button>
     </div>
 
+    <!-- Figures -->
     <div id='figures' style='padding-top: 10px;'>
       <svg
         width='1200' height='1200'

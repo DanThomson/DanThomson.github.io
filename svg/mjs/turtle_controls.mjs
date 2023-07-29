@@ -41,6 +41,18 @@ function get_f_replacement () {
 }
 
 
+const r_replacement_c = controls_node.querySelector('#r_replacement');
+function get_r_replacement () {
+  return r_replacement_c.value;
+}
+
+
+const l_replacement_c = controls_node.querySelector('#l_replacement');
+function get_l_replacement () {
+  return l_replacement_c.value;
+}
+
+
 const figures = document.querySelector('#figures');
 function get_figures () {
   return Array.prototype.slice.call( figures.children );
@@ -100,5 +112,7 @@ const name_space = {
   get_turn_angle,
   get_initial_phrase,
   get_f_replacement,
+  get_r_replacement,
+  get_l_replacement,
 };
 export default name_space;
