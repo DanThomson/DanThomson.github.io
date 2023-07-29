@@ -20,7 +20,11 @@ function step_forward(path_d, turtle_direction, step_length){
 function drawPath (turtle_path, commands) {
   const step_length = controls.get_step_length();
   const turn_angle = controls.get_turn_angle();
-  let path_d = 'M 600 300 l ';  // Start in top left corner
+
+  // TODO: create controls for x & y parameters
+  let x = 600;  // const x = controls.get_x();
+  let y = 300;  // const y = controls.get_y();
+  let path_d = `M ${x} ${y} l `;  // Start in top left corner
   let turtle_direction = Math.PI / 2;  // Start facing down
 
   for (let c of commands) {
