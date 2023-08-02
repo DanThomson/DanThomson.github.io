@@ -1,8 +1,4 @@
-// Get controls
-// Set listeners
 
-// Radians * (180 / Math.PI) = degrees
-const rtod = 180 / Math.PI;  // Not currently used
 // Degrees * (Math.PI / 180) = radians
 const dtor = Math.PI / 180;
 
@@ -11,55 +7,37 @@ const controls_node = document.querySelector('#controls');
 const update_c = controls_node.querySelector('#update');
 
 
-const gen_count_c = controls_node.querySelector('#gen_count');
-function get_gen_count () {
-  return Number(gen_count_c.value);
-}
+// Functions to get values from controls
 
+const gen_count_c = controls_node.querySelector('#gen_count');
+const get_gen_count = () => Number(gen_count_c.value);
 
 const step_length_c = controls_node.querySelector('#step_length');
-function get_step_length () {
-  return Number(step_length_c.value);
-}
-
+const get_step_length = () => Number(step_length_c.value);
 
 const turn_angle_c = controls_node.querySelector('#turn_angle');
-function get_turn_angle () {
-  return Number(turn_angle_c.value) * dtor;
-}
-
+const get_turn_angle = () => Number(turn_angle_c.value) * dtor;
 
 const initial_phrase_c = controls_node.querySelector('#initial_phrase');
-function get_initial_phrase () {
-  return initial_phrase_c.value;
-}
-
+const get_initial_phrase = () => initial_phrase_c.value;
 
 const f_replacement_c = controls_node.querySelector('#f_replacement');
-function get_f_replacement () {
-  return f_replacement_c.value;
-}
-
+const get_f_replacement = () => f_replacement_c.value;
 
 const r_replacement_c = controls_node.querySelector('#r_replacement');
-function get_r_replacement () {
-  return r_replacement_c.value;
-}
-
+const get_r_replacement = () => r_replacement_c.value;
 
 const l_replacement_c = controls_node.querySelector('#l_replacement');
-function get_l_replacement () {
-  return l_replacement_c.value;
-}
-
+const get_l_replacement = () => l_replacement_c.value;
 
 const figures = document.querySelector('#figures');
-function get_figures () {
-  return Array.prototype.slice.call( figures.children );
-}
+const get_figures = () => Array.prototype.slice.call(figures.children);
 
 
-gen_count_c.addEventListener('change',
+// Event listeners
+
+gen_count_c.addEventListener(
+  'change',
   change_event => {
     const count = change_event.srcElement.value;
     // TODO: validation
@@ -67,6 +45,7 @@ gen_count_c.addEventListener('change',
     // Adjust generation count
     if (figures.childElementCount < count) {
       // We need more figures
+
       const first = figures.children[0];
       for (let i=figures.childElementCount; i<count; i++) {
         let clone = first.cloneNode(true);
@@ -74,34 +53,40 @@ gen_count_c.addEventListener('change',
         // New elements will need their path.d updated
         figures.appendChild(clone);
       }
+
     } else if (figures.childElementCount > count) {
       // We have too many figures
+
       let remove_these = Array.prototype.slice.call(
         figures.children,
-        count,
-        figures.childElementCount,
+        count,  // Start of figures to be removed
+        figures.childElementCount,  // End of figures
       );
       remove_these.forEach(el => { figures.removeChild(el); });
+
     }
   },
 );
 
 
-// Generic update event. This must come after the update for
-// gen_count because that event creates and destroys html elements
-// which will be the target of code that reacts to a control's
-// update. When a control is updated we simulate update_c.click,
-// so dependent code can react to any control's change by adding a
-// click event handler to update_c.
-function onEvent (e) {
-  update_c.click();
-}
-const controls = [gen_count_c, step_length_c, turn_angle_c, initial_phrase_c, f_replacement_c];
-controls.forEach(
-  control => {
-    control.addEventListener('change', onEvent);
-  }
-);
+// Generic update event. When a control is updated we simulate
+// update_c.click, so dependent code can react to any control's
+// change by adding a click event handler to update_c.
+//
+// This must come after the update for gen_count because that
+// event creates and destroys html elements which will be the
+// target of code that reacts to a control's update.
+function onEvent (e) { update_c.click(); }
+
+[  // List of controls which call update_c.click when they change.
+  gen_count_c,
+  step_length_c,
+  turn_angle_c,
+  initial_phrase_c,
+  f_replacement_c,
+  r_replacement_c,
+  l_replacement_c,
+].forEach(control => control.addEventListener('change', onEvent));
 
 
 const name_space = {
