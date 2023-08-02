@@ -45,25 +45,20 @@ gen_count_c.addEventListener(
     // Adjust generation count
     if (figures.childElementCount < count) {
       // We need more figures
-
       const first = figures.children[0];
       for (let i=figures.childElementCount; i<count; i++) {
         let clone = first.cloneNode(true);
-        // update clone or something
-        // New elements will need their path.d updated
         figures.appendChild(clone);
       }
 
     } else if (figures.childElementCount > count) {
       // We have too many figures
-
       let remove_these = Array.prototype.slice.call(
         figures.children,
         count,  // Start of figures to be removed
         figures.childElementCount,  // End of figures
       );
-      remove_these.forEach(el => { figures.removeChild(el); });
-
+      remove_these.forEach(el => figures.removeChild(el));
     }
   },
 );
