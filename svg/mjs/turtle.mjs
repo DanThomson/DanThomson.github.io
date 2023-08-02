@@ -7,7 +7,7 @@ const reF = /F/g;
 const reR = /R/g;
 const reL = /L/g;
 
-function step_forward(path_d, turtle_direction, step_length){
+function step_forward(path_d, turtle_direction, step_length) {
   let dy, dx;
 
   dy = Math.round(step_length * Math.sin(turtle_direction));
@@ -60,6 +60,12 @@ function rewrite_commands (commands, f_replacement, r_replacement, l_replacement
   if (commands === '') {
     return controls.get_initial_phrase();
   }
+  // Rewrite is done in two steps
+  // First step replaces uppercase letters with lowercase strings
+  // Second step is to make all letters uppercase.
+  // This two step process allows us to use multiple replaceAll.
+  // If this wasn't done in two steps we'd mistakenly replace
+  // newly written portions of our string.
   commands = commands.replaceAll(reF, f_replacement)
   commands = commands.replaceAll(reR, r_replacement)
   commands = commands.replaceAll(reL, l_replacement)
