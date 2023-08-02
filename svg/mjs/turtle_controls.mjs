@@ -99,5 +99,6 @@ const name_space = {
   get_f_replacement,
   get_r_replacement,
   get_l_replacement,
+  gen_count_c,
 };
 export default name_space;

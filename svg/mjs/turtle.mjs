@@ -30,13 +30,8 @@ const get_replacement = () => [
 ];
 
 
-function drawPath(turtle_path, path, RorL, x, y) {
-
-  x = RorL === 'R' ? 10 : 1190;
-  y -= 10;  // const y = controls.get_y();
-
+function drawPath(turtle_path, path, x, y) {
   let path_d = `M ${x} ${y} l `;  // Start at x, y, then lineto releative coordinate pairs
-
   path_d += path;
   turtle_path.setAttribute('d', path_d);
 }
@@ -59,7 +54,7 @@ controls.update_c.addEventListener(
         // figure.querySelector('.turtle_commands').textContent = turtle_commands;
 
         const turtle_path = figure.querySelector('.turtle_path');
-        let path = movement.createPath({ turtle_commands, step_length, turn_angle })
+        let path = movement.createPath(turtle_commands, step_length, turn_angle);
 
         let path_s = '';
         let sum_x = 0;
@@ -68,7 +63,6 @@ controls.update_c.addEventListener(
           point => {
             sum_x += point[0];
             sum_y += point[1];
-
             path_s += `${point[0]} ${point[1]} `;
           }
         );
@@ -81,13 +75,20 @@ controls.update_c.addEventListener(
         // console.log(figure.viewBox.baseVal.height);
         // console.log(figure.viewBox.baseVal.width);
 
+        let x = turtle_commands[0] === 'R' ? 10 : 1190;
         let y = Math.abs(Math.round(sum_y)) * 2 + 20;
 
         figure.height.baseVal.value = y;
         figure.viewBox.baseVal.height = y;
 
-        drawPath(turtle_path, path_s, turtle_commands[0], 0, y);
+        y -= 10;
+        drawPath(turtle_path, path_s, x, y);
       }
     );
   }
 );
+
+
+// Force a change event on gen_count_c, so the number of figures will be updated.
+var event = new Event('change');
+controls.gen_count_c.dispatchEvent(event);
